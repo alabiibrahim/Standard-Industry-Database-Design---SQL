@@ -1,4 +1,4 @@
-
+# Industry Database design - SQL
 
 # Table of Contents
 
