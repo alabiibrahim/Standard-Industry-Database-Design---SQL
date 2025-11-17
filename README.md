@@ -1,13 +1,51 @@
 # Standard-Industry-Database-Design---SQL
 
 
-# Project Objective: 
+# Table of Contents
 
-To design a standard industry like database that stores informations and other confidential details. This database follows industry best practices for security, scalability and maintainability that 
-companies like Google uses.
+- [Project deliverable](#Project-deliverable)
+- [Tables](#Tables)
+- [Database Design Concepts](#DesignConcepts)
+- [Tools](#Tools)
+- [Query Visuals](#Query-Visuals)
+- [How it helps](#How-it-helps)
 
+
+# Project Deliverables: 
+
+This project is a complete SQL Server based relational database designed to handle the core backend requirements of a modern digital platform. This database follows industry best practices for security, scalability and maintainability that companies like Google uses.
+
+- Data modeling.
+- Backend system architecture.
+- Security-aware design.
+- Scalable relational structures.
+- Understanding real-world application needs.
 
 ![Visual](image/ERD-%20Screenshot.png)
+
+# Tables
+
+- User Identity & Profiles: Centralized user table with authentication fields, contact details, and profile metadata.
+
+- Session Management: Tracks active sessions, devices, browsers, IP addresses, timestamps, and security status.
+
+- Login Attempt Tracking: Monitors failed and successful login attempts for security analysis.
+
+- Audit Logging: Full history of actions taken by users — including before/after values stored as JSON.
+
+- Payment Methods & Credit Card Details: Handles stored payment options, linked to user accounts with secure relationships.
+
+- Address Details: Multiple addresses per user with full geolocation structure.
+
+- User Preferences: Stores personalized settings for a customized user experience.
+
+# Tools
+
+| Tools | Purpose |
+
+| ------ | ------|
+
+| SQL | Data Modeling, Query| 
 
 
 # Database design concept details:
@@ -237,3 +275,10 @@ CREATE TABLE AuditLogs (
 
 ```
 ![Visual](image/9.png)
+
+
+# How it helps
+This structure represents the backbone of a scalable, secure, and analytics friendly application. It supports authentication, monitoring, payments, and personalization. All while maintaining data integrity through foreign keys, triggers, constraints, and indexing.
+
+
+
