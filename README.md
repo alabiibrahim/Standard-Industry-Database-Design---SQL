@@ -278,7 +278,12 @@ CREATE TABLE AuditLogs (
 
 
 ## How it helps
-This structure represents the backbone of a scalable, secure, and analytics friendly application. It supports authentication, monitoring, payments, and personalization. All while maintaining data integrity through foreign keys, triggers, constraints, and indexing.
+
+- This structure represents the backbone of a scalable, secure, and analytics friendly application.
+
+- It supports authentication, monitoring, payments, and personalization.
+
+- Helps in maintaining data integrity through foreign keys, triggers, constraints, and indexing.
 
 
 
