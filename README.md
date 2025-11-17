@@ -81,6 +81,8 @@ CREATE TABLE User_Auth_Providers (
 );
 ```
 
+![Visual](image/2.png)
+
 ```sql 
 
 ----|| Create 'login attempts' table for security monitoring to enable fraud detection || ----
@@ -97,6 +99,7 @@ CREATE TABLE Login_Attempts (
 );
 ```
 
+![Visual](image/3.png)
 
 ``` sql
 
@@ -120,6 +123,8 @@ CREATE TABLE Payment_Method (
 
 ```
 
+![Visual](image/4.png)
+
 ```sql
 
 ----|| Create 'CreditCard' table for card specific data  || ----
@@ -140,6 +145,7 @@ CREATE TABLE CreditCardDetails (
 
 ```
 
+![Visual](image/5.png)
 
 ``` sql
 
@@ -165,6 +171,8 @@ CREATE TABLE AddressDetails (
 
 ```
 
+![Visual](image/6.png)
+
 ``` sql
 
 ----|| Create 'UserPreferences' table to retain information on settings and customization  || ----
@@ -181,6 +189,8 @@ CREATE TABLE UserPreferences (
 );
 
 ```
+
+![Visual](image/7.png)
 
 ``` sql
 ----|| Create 'UserSessions' table to monitor and track user active login sessions || ----
@@ -203,6 +213,8 @@ CREATE TABLE UserSessions (
 );
 ```
 
+![Visual](image/8.png)
+
 ```sql
 
 ----|| Create 'AuditLogs' table to security and compliance || ----
@@ -222,3 +234,4 @@ CREATE TABLE AuditLogs (
 );
 
 ```
+![Visual](image/9.png)
