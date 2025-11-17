@@ -14,15 +14,22 @@
 # Database concept details
 
 ## Data Types
-- VARCHAR
-- BOOLEAN
-- CHAR
-- DECIMAL
-- TEXT
-- INT
+- VARCHAR                    -  Variable length string with (max) characters.
+- BOOLEAN                    -  True / False data types.
+- CHAR                       -  Specified number of characters with length.
+- DECIMAL                    -  Return values in a decimal place
+- TEXT                       -  Return unlimited texts in a column.
+- INT                        -  Integer values.
 - DATE / DATETIME            -  Returns the date or datetime column.
 - CURRENT_TIMESTAMP          -  Return the current date of the system running SQL.
 - GETDATE                    -  Alternative to the 'CURRENT_TIMESTAMP' function returns the system current date.
+
+# Constraints
+- PRIMARY KEY: Unique identifier for each row
+- UNIQUE: No duplicate values allowed in this column
+- NOT NULL: Column must have a value
+- REFERENCES: Foreign key relationship to another table
+- ON DELETE CASCADE: Automatically delete related records when parent is deleted
 
 ``` sql
 
@@ -73,6 +80,7 @@ CREATE TABLE User_Auth_Providers (
 ```
 
 ```sql 
+
 ----|| Create 'login attempts' table for security monitoring to enable fraud detection || ----
 
 CREATE TABLE Login_Attempts (
@@ -86,6 +94,7 @@ CREATE TABLE Login_Attempts (
     Attempted_at        DATETIME    DEFAULT     CURRENT_TIMESTAMP
 );
 ```
+
 
 ``` sql
 
@@ -131,6 +140,7 @@ CREATE TABLE CreditCardDetails (
 
 
 ``` sql
+
 ----|| Create 'AddressDetails' table to store for location management  || ----
 
 CREATE TABLE AddressDetails (
@@ -154,6 +164,7 @@ CREATE TABLE AddressDetails (
 ```
 
 ``` sql
+
 ----|| Create 'UserPreferences' table to retain information on settings and customization  || ----
 
 CREATE TABLE UserPreferences (
@@ -189,7 +200,9 @@ CREATE TABLE UserSessions (
     Is_Active           BIT DEFAULT 1               --- Returns columns as boolean 1(True).
 );
 ```
+
 ```sql
+
 ----|| Create 'AuditLogs' table to security and compliance || ----
 
 CREATE TABLE AuditLogs (
