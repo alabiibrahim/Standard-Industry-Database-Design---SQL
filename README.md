@@ -6,18 +6,18 @@ companies like Google uses.
 
 
 
-# Database concept details
+# Database design concept details
 
 ## Data Types
-- VARCHAR                    -  Variable length string with (max) characters.
-- BOOLEAN                    -  True / False data types.
-- CHAR                       -  Specified number of characters with length.
-- DECIMAL                    -  Return values in a decimal place
-- TEXT                       -  Return unlimited texts in a column.
-- INT                        -  Integer values.
-- DATE / DATETIME            -  Returns the date or datetime column.
-- CURRENT_TIMESTAMP          -  Return the current date of the system running SQL.
-- GETDATE                    -  Alternative to the 'CURRENT_TIMESTAMP' function returns the system current date.
+- VARCHAR:                  Variable length string with (max) characters.
+- BOOLEAN:                  True / False data types.
+- CHAR:                     Specified number of characters with length.
+- DECIMAL:                  Return values in a decimal place
+- TEXT:                     Return unlimited texts in a column.
+- INT;                      Integer values.
+- DATE / DATETIME:          Returns the date or datetime column.
+- CURRENT_TIMESTAMP:        Return the current date of the system running SQL.
+- GETDATE:                  Alternative to the 'CURRENT_TIMESTAMP' function returns the system current date.
 
 # Constraints
 - PRIMARY KEY:     Unique identifier for each row
@@ -55,6 +55,9 @@ CREATE TABLE UserT (
     Updated_at          DATETIME    DEFAULT     CURRENT_TIMESTAMP,
     Deleted_at          DATETIME
 );
+
+![Visual](main/image/9.png)
+
 ``` 
 
 ``` sql
