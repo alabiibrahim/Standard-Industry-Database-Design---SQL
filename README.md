@@ -43,16 +43,16 @@ This project is a complete SQL Server based relational database designed to hand
 
 | Tools | Purpose |
 
-| ------ | ------|
+| --- | ---|
 
-| SQL | Data Modeling, Query| 
+| SQL | Data Modeling, Query, Indexing, Constraint | 
 
 
 # Database design concept details:
 
 ### Data Types
 - VARCHAR:                  Variable length string with (max) characters.
-- BOOLEAN:                  True / False data types.
+- BIT:                      Boolean data type, it return True / False.
 - CHAR:                     Specified number of characters with length.
 - DECIMAL:                  Return values in a decimal place
 - TEXT:                     Return unlimited texts in a column.
