@@ -10,11 +10,11 @@
 (4)	Upload to all social platforms.
 
 */
-```
+``` sql
 
 ----|| Create a Users table to store confidetial details || ----
 
-```sql
+
 
 CREATE TABLE UserT (
     UserID              INT PRIMARY KEY IDENTITY(1,1),      --- 'PRIMARY KEY' is a unique identifier of a table (row).
