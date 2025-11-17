@@ -1,15 +1,10 @@
 # Standard-Industry-Database-Design---SQL
 
 
+Project Objective: To design a standard industry like database that stores informations and other confidential details. This database follows industry best practices for security, scalability and maintainability that 
+companies like Google uses.
 
-/*	Project Objective: To design a standard industry like database that stores informations and other confidential details. As an aspiring Data Engineer.
 
-(1) Give a detailed breakdown on different SQL syntax used during the process, that makes it easy for a non technical audiece to understand.
-(2)	Document all process into a pdf or Github for portfolio purposes. 
-(3)	Take a screenshot of each table created for portfolio purposes.
-(4)	Upload to all social platforms.
-
-*/
 
 # Database concept details
 
@@ -25,11 +20,11 @@
 - GETDATE                    -  Alternative to the 'CURRENT_TIMESTAMP' function returns the system current date.
 
 # Constraints
-- PRIMARY KEY: Unique identifier for each row
-- UNIQUE: No duplicate values allowed in this column
-- NOT NULL: Column must have a value
-- REFERENCES: Foreign key relationship to another table
-- ON DELETE CASCADE: Automatically delete related records when parent is deleted
+- PRIMARY KEY:     Unique identifier for each row
+- UNIQUE:          No duplicate values allowed in this column
+- NOT NULL:        Column must have a value
+- REFERENCES:      Foreign key relationship to another table
+- ON DELETE CASCADE:   Automatically delete related records when parent is deleted
 
 ``` sql
 
