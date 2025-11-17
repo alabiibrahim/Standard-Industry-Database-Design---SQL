@@ -11,9 +11,22 @@
 
 */
 
+# Database concept details
+
+## Data Types
+- VARCHAR
+- BOOLEAN
+- CHAR
+- DECIMAL
+- TEXT
+- INT
+- DATE / DATETIME            -  Returns the date or datetime column.
+- CURRENT_TIMESTAMP          -  Return the current date of the system running SQL.
+- GETDATE                    -  Alternative to the 'CURRENT_TIMESTAMP' function returns the system current date.
+
 ``` sql
 
-----|| Create a Users table to store confidetial details || ----
+----|| Create a Users table to set user profile details || ----
 
 
 
@@ -44,7 +57,7 @@ CREATE TABLE UserT (
 
 ``` sql
 
-----|| Create a 'user authentication providers' table to store authentication details || ----
+----|| Create a 'user authentication providers' table to store log in methods || ----
 
 CREATE TABLE User_Auth_Providers (
     Provider_id         INT     PRIMARY KEY     IDENTITY(1,1),  --- 'IDENTITY' refers to auto increment by 1.
@@ -58,8 +71,9 @@ CREATE TABLE User_Auth_Providers (
     UNIQUE (ProviderType, Provider_userID)          --- Prevents duplicates connections.
 );
 ```
+
 ```sql 
-----|| Create 'login attempts' table for monitoring attempt process to enable fraud detection || ----
+----|| Create 'login attempts' table for security monitoring to enable fraud detection || ----
 
 CREATE TABLE Login_Attempts (
     Attempt_id          INT     PRIMARY KEY     IDENTITY(1,1),
@@ -75,7 +89,7 @@ CREATE TABLE Login_Attempts (
 
 ``` sql
 
-----|| Create 'Payment Method' table for user to follow the payment procedures  || ----
+----|| Create 'Payment Method' table for financial instruments  || ----
 
 CREATE TABLE Payment_Method (
     Payment_Method_id   INT     PRIMARY KEY     IDENTITY(1,1),
@@ -97,7 +111,7 @@ CREATE TABLE Payment_Method (
 
 ```sql
 
-----|| Create 'CreditCard' table for inputing of card details in other for a user to make purchase  || ----
+----|| Create 'CreditCard' table for card specific data  || ----
 
 CREATE TABLE CreditCardDetails (
     Card_id             INT     PRIMARY KEY     IDENTITY(1,1),
@@ -117,7 +131,7 @@ CREATE TABLE CreditCardDetails (
 
 
 ``` sql
-----|| Create 'AddressDetails' table to store user address for Security/shipping purposes  || ----
+----|| Create 'AddressDetails' table to store for location management  || ----
 
 CREATE TABLE AddressDetails (
     Address_id          INT     PRIMARY KEY     IDENTITY(1,1),
@@ -140,7 +154,7 @@ CREATE TABLE AddressDetails (
 ```
 
 ``` sql
-----|| Create 'UserPreferences' table to retain information on users choice  || ----
+----|| Create 'UserPreferences' table to retain information on settings and customization  || ----
 
 CREATE TABLE UserPreferences (
     PreferencesID       INT     PRIMARY KEY     IDENTITY(1,1),
@@ -156,7 +170,7 @@ CREATE TABLE UserPreferences (
 ```
 
 ``` sql
-----|| Create 'UserSessions' table to monitor and track user activity by location or phone || ----
+----|| Create 'UserSessions' table to monitor and track user active login sessions || ----
 
 CREATE TABLE UserSessions (
     Session_id          INT PRIMARY KEY IDENTITY(1,1),
@@ -176,7 +190,7 @@ CREATE TABLE UserSessions (
 );
 ```
 ```sql
-----|| Create 'AuditLogs' table to track user records || ----
+----|| Create 'AuditLogs' table to security and compliance || ----
 
 CREATE TABLE AuditLogs (
     Audit_id            INT     PRIMARY KEY     IDENTITY(1,1),      --- Auto increment by 1.
